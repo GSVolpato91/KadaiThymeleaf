@@ -5,13 +5,13 @@
     <title>Kadai Thymeleaf</title>
 </head>
 <body>
-        <h1>Thymeleaf課題</h1>
-        <h2>入力画面</h2>
-        <p>値を入力してください。</p>
+        <h1 th:text = "#{thymeleaf.kadai}"></h1>
+        <h2 th:text = "#{input.text}"></h2>
+        <p th:text = "#{enter.value}"></p>
          <p th:if="${param.previous} !=null"th:text="'入力された値は「' + ${param.previous} + '」でした。'"></p>
              <form method="post" action="/output">
             <input type="text" name="previous">
-            <button type="submit">送信</button>
+            <button type="submit" th:text = "#{submit.text}"></button>
 
 </body>
 </html>

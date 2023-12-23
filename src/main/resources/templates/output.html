@@ -5,9 +5,9 @@
     <title>Kadai Thymeleaf Output</title>
 </head>
 <body>
-        <h1>Thymeleaf課題</h1>
-        <h2>出力画面</h2>
+        <h1 th:text ="#{thymeleaf.kadai}"></h1>
+        <h2 th:text ="#{output.text}"></h2>
     <p th:text="'入力された値は「' + ${previous} + '」です。'"></p>
-     <p><a th:href="@{/input(previous=${param.previous[0]})}">入力画面へ戻る</a></p>
+     <p><a th:href="@{/input(previous=${param.previous[0]})}" th:text ="#{return.input}"></a></p>
 </body>
 </html>
